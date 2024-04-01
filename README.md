@@ -67,7 +67,7 @@ serverless invoke local --function hello -d 'data: {someAttr: "someValue"}'
 
 Which should result in response similar to the following:
 
-```
+```json
 {
     "statusCode": 200,
     "body": {
