@@ -50,7 +50,10 @@ Which should result in response similar to the following:
 ```json
 {
     "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": {}\n}"
+    "body": {
+        "message": "Go Serverless v3.0! Your function executed successfully!",
+        "input": ""
+    }
 }
 ```
 
@@ -59,7 +62,7 @@ Which should result in response similar to the following:
 You can invoke your function locally by using the following command:
 
 ```bash
-serverless invoke local --function hello
+serverless invoke local --function hello -d 'data: {someAttr: "someValue"}'
 ```
 
 Which should result in response similar to the following:
@@ -67,6 +70,9 @@ Which should result in response similar to the following:
 ```
 {
     "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
+    "body": {
+        "message": "Go Serverless v3.0! Your function executed successfully!",
+        "input": "data: {someAttr: \"someValue\"}"
+    }
 }
 ```

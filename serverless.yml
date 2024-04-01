@@ -35,7 +35,7 @@ resources:
         TableName: ${self:service}-customerTable-${sls:stage}
 
 functions:
-  function1:
+  hello:
     handler: index.handler
   createCustomer: 
     handler: createCustomer.createCustomer
